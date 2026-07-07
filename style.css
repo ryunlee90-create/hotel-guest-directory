@@ -91,6 +91,28 @@ a {
   z-index: 1;
 }
 
+.main-hero .hero-inner {
+  position: relative;
+}
+
+.hero-logo {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 96px;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  opacity: 0.96;
+  border: none;
+  box-shadow: none;
+  background: transparent;
+}
+
+.main-hero .kicker {
+  padding-right: 122px;
+}
+
 .kicker {
   display: block;
   font-size: 11px;
@@ -445,6 +467,30 @@ details p {
   word-break: keep-all;
 }
 
+.floating-home {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  z-index: 50;
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  background: #17202b;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: -0.2px;
+  box-shadow: 0 12px 28px rgba(23, 32, 43, 0.28);
+  border: 1px solid rgba(199, 166, 105, 0.45);
+}
+
+.floating-home:active {
+  transform: translateY(1px);
+}
+
 @media (max-width: 520px) {
   .page {
     padding: 18px 15px 28px;
@@ -456,6 +502,14 @@ details p {
 
   .hero h1 {
     font-size: 28px;
+  }
+
+  .hero-logo {
+    width: 76px;
+  }
+
+  .main-hero .kicker {
+    padding-right: 96px;
   }
 
   .essential-grid {
@@ -492,35 +546,11 @@ details p {
   .contact-actions {
     grid-template-columns: 1fr;
   }
-}
-  .main-hero .hero-inner {
-  position: relative;
+
+  .floating-home {
+    right: 15px;
+    bottom: 15px;
+    width: 52px;
+    height: 52px;
   }
-
-  .hero-logo {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 62px;
-    height: 62px;
-    object-fit: cover;
-    display: block;
-    opacity: 0.92;
-    border: 1px solid rgba(255, 255, 255, 0.16);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
-  }
-
-  .main-hero .kicker {
-    padding-right: 82px;
-  }
-
-  @media (max-width: 520px) {
-    .hero-logo {
-      width: 52px;
-      height: 52px;
-    }
-
-    .main-hero .kicker {
-      padding-right: 68px;
-    }
 }
