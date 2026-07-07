@@ -493,3 +493,24 @@ details p {
     grid-template-columns: 1fr;
   }
 }
+  .hero-logo {
+  width: 84px;
+  height: 84px;
+  object-fit: cover;
+  display: block;
+  margin-bottom: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.22);
+}
+
+.main-hero .kicker {
+  margin-bottom: 18px;
+}
+
+@media (max-width: 520px) {
+  .hero-logo {
+    width: 74px;
+    height: 74px;
+    margin-bottom: 22px;
+  }
+}
