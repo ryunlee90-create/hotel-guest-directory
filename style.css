@@ -155,26 +155,26 @@ a {
 }
 
 .essential-title {
-  padding: 28px 24px 25px;
+  padding: 24px 24px 22px;
   border-bottom: 1px solid #e8e1d7;
 }
 
 .essential-title span {
   display: block;
-  font-size: 11px;
-  letter-spacing: 3.8px;
+  font-size: 10px;
+  letter-spacing: 3.4px;
   color: #a18045;
   font-weight: 800;
   text-transform: uppercase;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
 }
 
 .essential-title h2 {
   margin: 0;
-  font-size: 30px;
+  font-size: 26px;
   color: #17202b;
-  letter-spacing: -1px;
-  line-height: 1.22;
+  letter-spacing: -0.8px;
+  line-height: 1.25;
 }
 
 .essential-grid {
@@ -184,8 +184,8 @@ a {
 
 .essential-item {
   position: relative;
-  min-height: 168px;
-  padding: 24px 22px 26px;
+  min-height: 126px;
+  padding: 20px 20px 18px;
   border-bottom: 1px solid #eee7dd;
   display: flex;
   flex-direction: column;
@@ -209,47 +209,41 @@ a {
 
 .essential-number {
   display: block;
-  font-size: 15px;
-  letter-spacing: 3px;
+  font-size: 12px;
+  letter-spacing: 2.4px;
   color: #a18045;
   font-weight: 800;
   line-height: 1;
 }
 
 .essential-content {
-  margin-top: 34px;
-}
-
-.essential-en {
-  font-size: 10px;
-  letter-spacing: 1.7px;
-  color: #9b9287;
-  font-weight: 800;
-  text-transform: uppercase;
-  line-height: 1.3;
-  min-height: 13px;
-}
-
-.essential-line {
-  width: 32px;
-  height: 1px;
-  background: #b89658;
-  margin: 14px 0 16px;
-  opacity: 0.75;
+  margin-top: 28px;
 }
 
 .essential-label {
-  font-size: 25px;
-  line-height: 1.22;
+  font-size: 22px;
+  line-height: 1.2;
   font-weight: 800;
   color: #1e252f;
-  letter-spacing: -0.9px;
+  letter-spacing: -0.8px;
   word-break: keep-all;
+}
+
+.essential-en {
+  margin-top: 8px;
+  font-size: 9px;
+  letter-spacing: 1.5px;
+  color: #9b9287;
+  font-weight: 800;
+  text-transform: uppercase;
+  line-height: 1.35;
+  white-space: nowrap;
 }
 
 .essential-value,
 .essential-icon,
-.essential-top {
+.essential-top,
+.essential-line {
   display: none;
 }
 
@@ -315,10 +309,10 @@ a {
 
 .directory-item {
   display: grid;
-  grid-template-columns: 58px 1fr 18px;
+  grid-template-columns: 50px 1fr 18px;
   gap: 14px;
   align-items: center;
-  padding: 26px 20px;
+  padding: 20px 20px;
   border-bottom: 1px solid #eee7dd;
   transition: background 0.15s ease, transform 0.15s ease;
 }
@@ -333,35 +327,35 @@ a {
 }
 
 .benefit-item {
-  grid-template-columns: 58px 1fr;
+  grid-template-columns: 50px 1fr;
 }
 
 .directory-no {
-  font-size: 14px;
+  font-size: 12px;
   letter-spacing: 2px;
   color: #a18045;
   font-weight: 800;
 }
 
 .directory-title {
-  font-size: 23px;
+  font-size: 18px;
   font-weight: 800;
   color: #1e252f;
-  letter-spacing: -0.7px;
+  letter-spacing: -0.6px;
   line-height: 1.3;
 }
 
 .directory-desc {
-  margin-top: 7px;
-  font-size: 14px;
+  margin-top: 5px;
+  font-size: 13px;
   color: #7c7367;
-  line-height: 1.6;
+  line-height: 1.55;
   word-break: keep-all;
 }
 
 .arrow {
   color: #b89658;
-  font-size: 24px;
+  font-size: 22px;
   text-align: right;
 }
 
@@ -603,11 +597,11 @@ details p {
   }
 
   .essential-title {
-    padding: 26px 22px 24px;
+    padding: 23px 22px 21px;
   }
 
   .essential-title h2 {
-    font-size: 30px;
+    font-size: 25px;
   }
 
   .essential-grid {
@@ -615,8 +609,8 @@ details p {
   }
 
   .essential-item {
-    min-height: 162px;
-    padding: 24px 20px 25px;
+    min-height: 122px;
+    padding: 18px 17px 17px;
   }
 
   .essential-item:nth-child(odd) {
@@ -628,43 +622,40 @@ details p {
   }
 
   .essential-number {
-    font-size: 15px;
-    letter-spacing: 3px;
+    font-size: 12px;
+    letter-spacing: 2.3px;
   }
 
   .essential-content {
-    margin-top: 32px;
-  }
-
-  .essential-en {
-    font-size: 9px;
-    letter-spacing: 1.4px;
-  }
-
-  .essential-line {
-    width: 30px;
-    margin: 13px 0 15px;
+    margin-top: 25px;
   }
 
   .essential-label {
-    font-size: 24px;
-    text-align: left;
-    justify-content: flex-start;
-    padding-top: 0;
+    font-size: 21px;
+  }
+
+  .essential-en {
+    margin-top: 7px;
+    font-size: 8px;
+    letter-spacing: 1.3px;
   }
 
   .directory-item {
-    grid-template-columns: 46px 1fr 16px;
+    grid-template-columns: 42px 1fr 16px;
     gap: 12px;
-    padding: 24px 18px;
+    padding: 19px 18px;
   }
 
   .benefit-item {
-    grid-template-columns: 46px 1fr;
+    grid-template-columns: 42px 1fr;
   }
 
   .directory-title {
-    font-size: 21px;
+    font-size: 17px;
+  }
+
+  .directory-desc {
+    font-size: 12px;
   }
 
   .info-row {
