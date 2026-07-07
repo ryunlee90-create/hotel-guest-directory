@@ -251,6 +251,10 @@ a {
   border-bottom: none;
 }
 
+.benefit-item {
+  grid-template-columns: 58px 1fr;
+}
+
 .directory-no {
   font-size: 12px;
   letter-spacing: 1.8px;
@@ -470,6 +474,10 @@ details p {
     grid-template-columns: 46px 1fr 16px;
     gap: 12px;
     padding: 18px 16px;
+  }
+
+  .benefit-item {
+    grid-template-columns: 46px 1fr;
   }
 
   .info-row {
