@@ -52,9 +52,12 @@ a {
   letter-spacing: 1.2px;
   color: #6f6659;
   border: 1px solid #d3cabd;
+  border-radius: 999px;
   padding: 8px 12px;
-  background: rgba(255,255,255,0.42);
+  background: rgba(255, 255, 255, 0.42);
 }
+
+/* Hero */
 
 .hero {
   background: #17202b;
@@ -62,7 +65,8 @@ a {
   padding: 44px 28px 42px;
   position: relative;
   overflow: hidden;
-  box-shadow: 0 22px 48px rgba(23, 32, 43, 0.24);
+  border-radius: 24px;
+  box-shadow: 0 22px 48px rgba(23, 32, 43, 0.22);
 }
 
 .hero::before {
@@ -72,7 +76,7 @@ a {
   top: 0;
   width: 48%;
   height: 100%;
-  background: linear-gradient(135deg, rgba(191, 157, 95, 0.32), rgba(255,255,255,0));
+  background: linear-gradient(135deg, rgba(191, 157, 95, 0.32), rgba(255, 255, 255, 0));
   opacity: 0.9;
 }
 
@@ -95,9 +99,10 @@ a {
   position: relative;
 }
 
+/* 로고: 이미지 자체는 안 건드리고 위치만 살짝 위로 */
 .hero-logo {
   position: absolute;
-  top: 0;
+  top: -8px;
   right: 0;
   width: 96px;
   height: auto;
@@ -135,14 +140,19 @@ a {
   margin: 18px 0 0;
   font-size: 15px;
   line-height: 1.85;
-  color: rgba(255,255,255,0.82);
+  color: rgba(255, 255, 255, 0.82);
   word-break: keep-all;
 }
+
+/* Essential */
 
 .essential {
   background: #fff;
   border: 1px solid #d8d0c2;
+  border-radius: 18px;
+  overflow: hidden;
   margin-top: 18px;
+  box-shadow: 0 10px 28px rgba(23, 32, 43, 0.055);
 }
 
 .essential-title {
@@ -176,6 +186,12 @@ a {
   padding: 17px 18px;
   border-bottom: 1px solid #eee7dd;
   min-height: 96px;
+  transition: background 0.15s ease, transform 0.15s ease;
+}
+
+.essential-item:active {
+  background: #faf7f1;
+  transform: scale(0.99);
 }
 
 .essential-item:nth-child(odd) {
@@ -198,7 +214,7 @@ a {
 
 .essential-label {
   font-size: 15px;
-  font-weight: 800;
+  font-weight: 700;
   color: #1e252f;
   margin-bottom: 7px;
 }
@@ -210,16 +226,21 @@ a {
   word-break: keep-all;
 }
 
+/* Notice */
+
 .notice {
   margin-top: 18px;
   padding: 16px 18px;
   background: #f6f2ea;
   border-left: 3px solid #b89658;
+  border-radius: 16px;
   color: #5f564a;
   font-size: 14px;
   line-height: 1.75;
   word-break: keep-all;
 }
+
+/* Section */
 
 .section {
   margin-top: 38px;
@@ -255,9 +276,14 @@ a {
   word-break: keep-all;
 }
 
+/* Directory */
+
 .directory {
   background: #fff;
   border: 1px solid #d8d0c2;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 10px 28px rgba(23, 32, 43, 0.055);
 }
 
 .directory-item {
@@ -267,6 +293,12 @@ a {
   align-items: center;
   padding: 19px 18px;
   border-bottom: 1px solid #eee7dd;
+  transition: background 0.15s ease, transform 0.15s ease;
+}
+
+.directory-item:active {
+  background: #faf7f1;
+  transform: scale(0.99);
 }
 
 .directory-item:last-child {
@@ -286,7 +318,7 @@ a {
 
 .directory-title {
   font-size: 16px;
-  font-weight: 800;
+  font-weight: 700;
   color: #1e252f;
   margin-bottom: 5px;
 }
@@ -304,9 +336,14 @@ a {
   text-align: right;
 }
 
+/* Info Table */
+
 .info-table {
   background: #fff;
   border: 1px solid #d8d0c2;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 10px 28px rgba(23, 32, 43, 0.055);
 }
 
 .info-row {
@@ -343,9 +380,14 @@ a {
   word-break: keep-all;
 }
 
+/* FAQ */
+
 .faq {
   background: #fff;
   border: 1px solid #d8d0c2;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 10px 28px rgba(23, 32, 43, 0.055);
 }
 
 details {
@@ -364,7 +406,7 @@ summary {
   font-size: 15px;
   line-height: 1.6;
   color: #1e252f;
-  font-weight: 800;
+  font-weight: 700;
   word-break: keep-all;
 }
 
@@ -400,17 +442,21 @@ details p {
   padding: 15px 16px;
   background: #f6f2ea;
   border: 1px solid #eadcc2;
+  border-radius: 14px;
   font-size: 14px;
   line-height: 1.85;
   color: #4f473d;
   word-break: keep-all;
 }
 
+/* Contact */
+
 .contact {
   margin-top: 40px;
   background: #17202b;
   color: #fff;
   padding: 30px 24px;
+  border-radius: 24px;
   box-shadow: 0 22px 48px rgba(23, 32, 43, 0.2);
 }
 
@@ -426,7 +472,7 @@ details p {
 
 .contact p {
   margin: 13px 0 0;
-  color: rgba(255,255,255,0.8);
+  color: rgba(255, 255, 255, 0.8);
   font-size: 14px;
   line-height: 1.8;
   word-break: keep-all;
@@ -440,14 +486,23 @@ details p {
 }
 
 .contact-button {
-  border: 1px solid rgba(255,255,255,0.25);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 14px;
   padding: 15px 12px;
   text-align: center;
   color: #fff;
   font-size: 14px;
-  font-weight: 800;
-  background: rgba(255,255,255,0.06);
+  font-weight: 700;
+  background: rgba(255, 255, 255, 0.06);
+  transition: background 0.15s ease, transform 0.15s ease;
 }
+
+.contact-button:active {
+  background: rgba(255, 255, 255, 0.12);
+  transform: scale(0.985);
+}
+
+/* Back / Footer */
 
 .back-link {
   display: inline-block;
@@ -466,6 +521,8 @@ details p {
   line-height: 1.75;
   word-break: keep-all;
 }
+
+/* Floating Home */
 
 .floating-home {
   position: fixed;
@@ -491,6 +548,8 @@ details p {
   transform: translateY(1px);
 }
 
+/* Mobile */
+
 @media (max-width: 520px) {
   .page {
     padding: 18px 15px 28px;
@@ -498,6 +557,7 @@ details p {
 
   .hero {
     padding: 40px 23px 38px;
+    border-radius: 22px;
   }
 
   .hero h1 {
@@ -506,6 +566,7 @@ details p {
 
   .hero-logo {
     width: 76px;
+    top: -6px;
   }
 
   .main-hero .kicker {
