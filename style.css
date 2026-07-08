@@ -378,6 +378,20 @@ a {
 
 /* Directory */
 
+/* Main Directory Size */
+
+#directory-menu .section-title {
+  font-size: 24px;
+}
+
+#directory-menu .directory-item {
+  padding: 19px 20px;
+}
+
+#directory-menu .directory-title {
+  font-size: 19px;
+}
+
 .directory {
   background: #fff;
   border: 1px solid #d8d0c2;
@@ -1023,5 +1037,17 @@ body.search-open {
   .search-form input,
   .search-form button {
     min-height: 47px;
+  }
+  
+  #directory-menu .section-title {
+    font-size: 23px;
+  }
+
+  #directory-menu .directory-item {
+    padding: 18px 18px;
+  }
+
+  #directory-menu .directory-title {
+    font-size: 18px;
   }
 }
