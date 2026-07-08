@@ -47,6 +47,26 @@
       </div>
     </section>
 
+    <section class="search-section">
+      <div class="search-box">
+        <div class="search-label">Search</div>
+        <h2>필요한 안내를 검색해 주세요</h2>
+        <p>예: 와이파이, 조식, 수건, 정수기, 체크아웃</p>
+
+        <form id="guideSearchForm" class="search-form">
+          <input
+            id="guideSearchInput"
+            type="search"
+            placeholder="검색어를 입력해 주세요"
+            autocomplete="off"
+          />
+          <button type="submit">검색</button>
+        </form>
+
+        <div id="searchMessage" class="search-message"></div>
+      </div>
+    </section>
+
     <section class="quick">
       <div class="quick-title">
         <span>Most Requested</span>
@@ -143,5 +163,127 @@
     </footer>
 
   </main>
+
+  <script>
+    const searchRoutes = [
+      {
+        keywords: ['와이파이', 'wifi', 'wi-fi', '인터넷', '무선인터넷'],
+        url: 'stay.html#wifi',
+        label: 'Wi-Fi 안내'
+      },
+      {
+        keywords: ['조식', '아침', '식사', 'breakfast'],
+        url: 'stay.html#breakfast',
+        label: '조식 안내'
+      },
+      {
+        keywords: ['다이닝', '카페', '오름카페', '식음'],
+        url: 'stay.html#dining',
+        label: '다이닝 · 카페'
+      },
+      {
+        keywords: ['체크인', '체크아웃', '퇴실', '입실', '연장', '레이트체크아웃'],
+        url: 'stay.html#check',
+        label: '체크인 · 체크아웃'
+      },
+      {
+        keywords: ['에어컨', 'tv', '티비', '리모컨', '문', '문소리', '알림음'],
+        url: 'stay.html#room-guide',
+        label: '객실 이용 안내'
+      },
+      {
+        keywords: ['수건', '생수', '정수기', '전자레인지', '대여', '충전기', '컨버터', '와인오프너', '오프너', '배달음식'],
+        url: 'service.html#service',
+        label: '고객 서비스 안내'
+      },
+      {
+        keywords: ['편의점', 'cu', '씨유', '무인', '운영시간'],
+        url: 'service.html#facility',
+        label: '편의시설 안내'
+      },
+      {
+        keywords: ['택시', '주차', '차량번호', '교통'],
+        url: 'service.html#transport',
+        label: '교통 안내'
+      },
+      {
+        keywords: ['분실물', 'lost', '분실'],
+        url: 'service.html#lost',
+        label: '분실물 안내'
+      },
+      {
+        keywords: ['주변', '식당', '관광지', '지도', '카페추천'],
+        url: 'service.html#nearby',
+        label: '주변 안내'
+      },
+      {
+        keywords: ['흡연', '금연', '담배', '취사', '소음', '방충망', '카드키'],
+        url: 'policy.html#room-policy',
+        label: '객실 이용 기준'
+      },
+      {
+        keywords: ['청소', '객실정비', '정비', '쓰레기', '수거', '방해금지'],
+        url: 'policy.html#housekeeping',
+        label: '객실 정비 안내'
+      },
+      {
+        keywords: ['비상', '화재', '응급', '안전', '비상구'],
+        url: 'policy.html#safety',
+        label: '비상 · 안전 안내'
+      },
+      {
+        keywords: ['제휴', '혜택', '할인', '이벤트', '파더스가든', '산양큰엉곶', '탄산온천', '항공우주박물관', '유람선', '루나폴'],
+        url: 'benefits.html',
+        label: '제휴 혜택 안내'
+      },
+      {
+        keywords: ['faq', '문의', '질문', '자주묻는질문', '자주 묻는 질문'],
+        url: 'faq.html',
+        label: '자주 묻는 질문'
+      }
+    ];
+
+    const searchForm = document.getElementById('guideSearchForm');
+    const searchInput = document.getElementById('guideSearchInput');
+    const searchMessage = document.getElementById('searchMessage');
+
+    searchForm.addEventListener('submit', function(event) {
+      event.preventDefault();
+
+      const rawTerm = searchInput.value.trim();
+      const searchTerm = rawTerm.toLowerCase().replace(/\s+/g, '');
+
+      if (!searchTerm) {
+        searchMessage.textContent = '검색어를 입력해 주세요.';
+        return;
+      }
+
+      const matchedRoute = searchRoutes.find(function(route) {
+        return route.keywords.some(function(keyword) {
+          return searchTerm.includes(keyword.toLowerCase().replace(/\s+/g, ''));
+        });
+      });
+
+      if (matchedRoute) {
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({
+          event: 'guide_search',
+          search_term: rawTerm,
+          search_result: matchedRoute.label,
+          search_target: matchedRoute.url
+        });
+
+        window.location.href = matchedRoute.url;
+      } else {
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({
+          event: 'guide_search_no_result',
+          search_term: rawTerm
+        });
+
+        searchMessage.textContent = '검색 결과가 없습니다. 예: 와이파이, 조식, 수건, 정수기, 체크아웃';
+      }
+    });
+  </script>
 </body>
 </html>
