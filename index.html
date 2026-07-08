@@ -25,14 +25,15 @@
   <main class="page">
 
     <header class="topbar">
-      <div>
+      <div class="topbar-brand">
         <div class="brand-main">JEJU AEROSPACE HOTEL</div>
         <div class="brand-sub">Guest Directory</div>
       </div>
 
       <div class="topbar-actions">
         <button class="search-toggle" type="button" aria-label="검색 열기">
-          ⌕
+          <span class="search-mark" aria-hidden="true"></span>
+          <span>검색</span>
         </button>
         <div class="language">KR</div>
       </div>
@@ -182,12 +183,12 @@
   <script>
     const searchRoutes = [
       {
-        keywords: ['와이파이', 'wifi', 'wi-fi', '인터넷', '무선인터넷'],
+        keywords: ['와이파이', 'wifi', 'wi-fi', '인터넷', '무선인터넷', '비밀번호', '비번'],
         url: 'stay.html#wifi',
         label: 'Wi-Fi 안내'
       },
       {
-        keywords: ['조식', '아침', '식사', 'breakfast'],
+        keywords: ['조식', '아침', '식사', 'breakfast', '조식권', '조식시간', '조식금액'],
         url: 'stay.html#breakfast',
         label: '조식 안내'
       },
@@ -268,6 +269,11 @@
     function openSearch() {
       searchOverlay.classList.add('is-open');
       document.body.classList.add('search-open');
+
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({
+        event: 'guide_search_open'
+      });
 
       setTimeout(function() {
         searchInput.focus();
