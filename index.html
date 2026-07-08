@@ -56,41 +56,55 @@
 
     <section class="quick">
       <div class="quick-title">
-        <span>Most Requested</span>
-        <h2>자주 찾는 안내</h2>
+        <span>Quick Guide</span>
       </div>
 
       <div class="quick-grid">
-        <a class="quick-card" href="benefits.html">
+        <a
+          class="quick-card"
+          href="stay.html#wifi"
+          data-track-area="quick"
+          data-track-item="wifi"
+        >
           <div class="quick-no">01</div>
-          <div class="quick-main">제휴 혜택</div>
-          <div class="quick-en">Benefits</div>
-        </a>
-
-        <a class="quick-card" href="stay.html#wifi">
-          <div class="quick-no">02</div>
           <div class="quick-main">Wi-Fi</div>
           <div class="quick-en">Internet</div>
         </a>
 
-        <a class="quick-card" href="stay.html#dining">
-          <div class="quick-no">03</div>
-          <div class="quick-main">다이닝</div>
-          <div class="quick-en">Dining</div>
+        <a
+          class="quick-card"
+          href="stay.html"
+          data-track-area="quick"
+          data-track-item="stay_dining"
+        >
+          <div class="quick-no">02</div>
+          <div class="quick-main">투숙 · 다이닝</div>
+          <div class="quick-en">Stay & Dining</div>
         </a>
 
-        <a class="quick-card" href="#directory-menu">
+        <a
+          class="quick-card"
+          href="nearby.html"
+          data-track-area="quick"
+          data-track-item="nearby"
+        >
+          <div class="quick-no">03</div>
+          <div class="quick-main">주변 안내</div>
+          <div class="quick-en">Nearby</div>
+        </a>
+
+        <a
+          class="quick-card"
+          href="benefits.html"
+          data-track-area="quick"
+          data-track-item="benefits"
+        >
           <div class="quick-no">04</div>
-          <div class="quick-main">전체 안내</div>
-          <div class="quick-en">Directory</div>
+          <div class="quick-main">제휴 혜택</div>
+          <div class="quick-en">Benefits</div>
         </a>
       </div>
     </section>
-
-    <div class="notice">
-      본 페이지는 투숙 고객 편의를 위한 모바일 안내문입니다.
-      운영 상황에 따라 세부 기준은 변경될 수 있습니다.
-    </div>
 
     <section class="section" id="directory-menu">
       <div class="section-header">
@@ -99,32 +113,68 @@
       </div>
 
       <div class="directory">
-        <a class="directory-item" href="stay.html">
+        <a
+          class="directory-item"
+          href="stay.html"
+          data-track-area="directory"
+          data-track-item="stay_dining"
+        >
           <div class="directory-no">01</div>
           <div class="directory-title">투숙 · 다이닝</div>
           <div class="arrow">›</div>
         </a>
 
-        <a class="directory-item" href="service.html">
+        <a
+          class="directory-item"
+          href="service.html"
+          data-track-area="directory"
+          data-track-item="service_facility"
+        >
           <div class="directory-no">02</div>
           <div class="directory-title">서비스 · 편의시설</div>
           <div class="arrow">›</div>
         </a>
 
-        <a class="directory-item" href="policy.html">
+        <a
+          class="directory-item"
+          href="policy.html"
+          data-track-area="directory"
+          data-track-item="room_policy"
+        >
           <div class="directory-no">03</div>
           <div class="directory-title">객실 이용 유의사항</div>
           <div class="arrow">›</div>
         </a>
 
-        <a class="directory-item" href="benefits.html">
+        <a
+          class="directory-item"
+          href="benefits.html"
+          data-track-area="directory"
+          data-track-item="benefits"
+        >
           <div class="directory-no">04</div>
           <div class="directory-title">제휴 혜택</div>
           <div class="arrow">›</div>
         </a>
 
-        <a class="directory-item" href="faq.html">
+        <a
+          class="directory-item"
+          href="nearby.html"
+          data-track-area="directory"
+          data-track-item="nearby"
+        >
           <div class="directory-no">05</div>
+          <div class="directory-title">주변 안내</div>
+          <div class="arrow">›</div>
+        </a>
+
+        <a
+          class="directory-item"
+          href="faq.html"
+          data-track-area="directory"
+          data-track-item="faq"
+        >
+          <div class="directory-no">06</div>
           <div class="directory-title">자주 묻는 질문</div>
           <div class="arrow">›</div>
         </a>
@@ -139,8 +189,23 @@
       </p>
 
       <div class="contact-actions">
-        <a class="contact-button" href="tel:0647985500">064-798-5500</a>
-        <a class="contact-button" href="faq.html">FAQ 보기</a>
+        <a
+          class="contact-button"
+          href="tel:0647985500"
+          data-track-area="contact"
+          data-track-item="front_call"
+        >
+          064-798-5500
+        </a>
+
+        <a
+          class="contact-button"
+          href="faq.html"
+          data-track-area="contact"
+          data-track-item="faq"
+        >
+          FAQ 보기
+        </a>
       </div>
     </section>
 
@@ -193,7 +258,7 @@
         label: '조식 안내'
       },
       {
-        keywords: ['다이닝', '카페', '오름카페', '식음'],
+        keywords: ['다이닝', '오름카페', '식음'],
         url: 'stay.html#dining',
         label: '다이닝 · 카페'
       },
@@ -228,8 +293,8 @@
         label: '분실물 안내'
       },
       {
-        keywords: ['주변', '식당', '관광지', '지도', '카페추천'],
-        url: 'service.html#nearby',
+        keywords: ['주변', '식당', '관광지', '지도', '카페추천', '카페', '맛집', '비오는날', '비 오는 날', '우천', '근처'],
+        url: 'nearby.html',
         label: '주변 안내'
       },
       {
@@ -265,6 +330,7 @@
     const searchForm = document.getElementById('guideSearchForm');
     const searchInput = document.getElementById('guideSearchInput');
     const searchMessage = document.getElementById('searchMessage');
+    const trackedLinks = document.querySelectorAll('[data-track-area]');
 
     function openSearch() {
       searchOverlay.classList.add('is-open');
@@ -286,6 +352,18 @@
       searchMessage.textContent = '';
       searchInput.value = '';
     }
+
+    trackedLinks.forEach(function(link) {
+      link.addEventListener('click', function() {
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({
+          event: 'guide_menu_click',
+          menu_area: link.dataset.trackArea,
+          menu_item: link.dataset.trackItem,
+          menu_target: link.getAttribute('href')
+        });
+      });
+    });
 
     searchToggle.addEventListener('click', openSearch);
     searchClose.addEventListener('click', closeSearch);
