@@ -942,9 +942,9 @@ body.search-open {
   }
 
   .page-en-index .main-hero h1 {
-    font-size: 26px;
-    line-height: 1.25;
-    letter-spacing: -1px;
+    font-size: 28px;
+    line-height: 1.22;
+    letter-spacing: -0.8px;
   }
 
   .hero p {
