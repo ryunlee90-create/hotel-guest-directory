@@ -29,7 +29,13 @@
         <div class="brand-main">JEJU AEROSPACE HOTEL</div>
         <div class="brand-sub">Guest Directory</div>
       </div>
-      <div class="language">KR</div>
+
+      <div class="topbar-actions">
+        <button class="search-toggle" type="button" aria-label="검색 열기">
+          ⌕
+        </button>
+        <div class="language">KR</div>
+      </div>
     </header>
 
     <section class="hero main-hero">
@@ -47,7 +53,7 @@
       </div>
     </section>
 
-        <section class="quick">
+    <section class="quick">
       <div class="quick-title">
         <span>Most Requested</span>
         <h2>자주 찾는 안내</h2>
@@ -80,25 +86,7 @@
       </div>
     </section>
 
-    <section class="search-section">
-      <div class="search-box">
-        <div class="search-label">Search</div>
-        <h2>필요한 안내를 검색해 주세요</h2>
-        <p>예: 수건, 정수기, 전자레인지, 체크아웃</p>
-
-        <form id="guideSearchForm" class="search-form">
-          <input
-            id="guideSearchInput"
-            type="search"
-            placeholder="검색어를 입력해 주세요"
-            autocomplete="off"
-          />
-          <button type="submit">검색</button>
-        </form>
-
-        <div id="searchMessage" class="search-message"></div>
-      </div>
-    </section>
+    <div class="notice">
       본 페이지는 투숙 고객 편의를 위한 모바일 안내문입니다.
       운영 상황에 따라 세부 기준은 변경될 수 있습니다.
     </div>
@@ -159,6 +147,35 @@
       JEJU AEROSPACE HOTEL<br>
       제주특별자치도 서귀포시 안덕면 녹차분재로 216
     </footer>
+
+    <div class="search-overlay" id="searchOverlay">
+      <div class="search-panel">
+        <div class="search-panel-head">
+          <div>
+            <div class="search-label">Search</div>
+            <h2>필요한 안내를 검색해 주세요</h2>
+          </div>
+
+          <button class="search-close" type="button" aria-label="검색 닫기">
+            ×
+          </button>
+        </div>
+
+        <p>예: 수건, 정수기, 전자레인지, 체크아웃</p>
+
+        <form id="guideSearchForm" class="search-form">
+          <input
+            id="guideSearchInput"
+            type="search"
+            placeholder="검색어를 입력해 주세요"
+            autocomplete="off"
+          />
+          <button type="submit">검색</button>
+        </form>
+
+        <div id="searchMessage" class="search-message"></div>
+      </div>
+    </div>
 
   </main>
 
@@ -241,9 +258,43 @@
       }
     ];
 
+    const searchOverlay = document.getElementById('searchOverlay');
+    const searchToggle = document.querySelector('.search-toggle');
+    const searchClose = document.querySelector('.search-close');
     const searchForm = document.getElementById('guideSearchForm');
     const searchInput = document.getElementById('guideSearchInput');
     const searchMessage = document.getElementById('searchMessage');
+
+    function openSearch() {
+      searchOverlay.classList.add('is-open');
+      document.body.classList.add('search-open');
+
+      setTimeout(function() {
+        searchInput.focus();
+      }, 120);
+    }
+
+    function closeSearch() {
+      searchOverlay.classList.remove('is-open');
+      document.body.classList.remove('search-open');
+      searchMessage.textContent = '';
+      searchInput.value = '';
+    }
+
+    searchToggle.addEventListener('click', openSearch);
+    searchClose.addEventListener('click', closeSearch);
+
+    searchOverlay.addEventListener('click', function(event) {
+      if (event.target === searchOverlay) {
+        closeSearch();
+      }
+    });
+
+    document.addEventListener('keydown', function(event) {
+      if (event.key === 'Escape') {
+        closeSearch();
+      }
+    });
 
     searchForm.addEventListener('submit', function(event) {
       event.preventDefault();
@@ -279,7 +330,7 @@
           search_term: rawTerm
         });
 
-        searchMessage.textContent = '검색 결과가 없습니다. 예: 와이파이, 조식, 수건, 정수기, 체크아웃';
+        searchMessage.textContent = '검색 결과가 없습니다. 예: 수건, 정수기, 전자레인지, 체크아웃';
       }
     });
   </script>
