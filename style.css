@@ -1409,3 +1409,73 @@ body.search-open {
     font-size: 21px;
   }
 }
+/* Nearby Card Layout Fix */
+
+.nearby-card {
+  display: block;
+  padding: 26px 22px;
+}
+
+.nearby-icon {
+  display: none;
+}
+
+.nearby-category {
+  display: block;
+  margin-bottom: 14px;
+  font-size: 10px;
+  letter-spacing: 3px;
+  color: #a18045;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.nearby-card h3 {
+  display: block;
+  margin: 0;
+  font-size: 25px;
+  line-height: 1.35;
+  color: #1e252f;
+  letter-spacing: -0.8px;
+  word-break: keep-all;
+}
+
+.nearby-card p {
+  display: block;
+  clear: both;
+  margin: 14px 0 0;
+  font-size: 15px;
+  line-height: 1.75;
+  color: #7c7367;
+  word-break: keep-all;
+}
+
+.nearby-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 18px;
+  min-height: 42px;
+  padding: 0 18px;
+  border-radius: 999px;
+  background: #17202b;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+@media (max-width: 520px) {
+  .nearby-card {
+    display: block;
+    padding: 24px 20px;
+  }
+
+  .nearby-card h3 {
+    font-size: 24px;
+  }
+
+  .nearby-card p {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+}
