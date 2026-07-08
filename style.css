@@ -1263,3 +1263,149 @@ body.search-open {
     font-size: 11px;
   }
 }
+/* Nearby Tabs */
+
+.nearby-section {
+  margin-top: 34px;
+}
+
+.nearby-tabs {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+  margin-top: 18px;
+  background: #fff;
+  border: 1px solid #d8d0c2;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 10px 28px rgba(23, 32, 43, 0.055);
+}
+
+.nearby-tab {
+  min-height: 58px;
+  border: none;
+  border-right: 1px solid #eee7dd;
+  background: #fff;
+  color: #1e252f;
+  font-size: 16px;
+  font-weight: 800;
+  letter-spacing: -0.4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.nearby-tab:last-child {
+  border-right: none;
+}
+
+.nearby-tab.is-active {
+  background: #17202b;
+  color: #fff;
+}
+
+.nearby-panels {
+  margin-top: 14px;
+}
+
+.nearby-panel {
+  display: none;
+}
+
+.nearby-panel.is-active {
+  display: block;
+}
+
+.nearby-card {
+  display: grid;
+  grid-template-columns: 54px 1fr;
+  gap: 16px;
+  align-items: start;
+  background: #fff;
+  border: 1px solid #d8d0c2;
+  border-radius: 22px;
+  padding: 22px 20px;
+  box-shadow: 0 10px 28px rgba(23, 32, 43, 0.055);
+}
+
+.nearby-icon {
+  width: 54px;
+  height: 54px;
+  border-radius: 18px;
+  background: #f6f2ea;
+  border: 1px solid #eadcc2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+}
+
+.nearby-category {
+  display: block;
+  font-size: 10px;
+  letter-spacing: 2.4px;
+  color: #a18045;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.nearby-card h3 {
+  margin: 0;
+  font-size: 22px;
+  line-height: 1.35;
+  color: #1e252f;
+  letter-spacing: -0.7px;
+}
+
+.nearby-card p {
+  margin: 10px 0 0;
+  font-size: 14px;
+  line-height: 1.75;
+  color: #7c7367;
+  word-break: keep-all;
+}
+
+.nearby-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 16px;
+  min-height: 42px;
+  padding: 0 16px;
+  border-radius: 999px;
+  background: #17202b;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+@media (max-width: 520px) {
+  .nearby-tabs {
+    margin-top: 16px;
+    border-radius: 17px;
+  }
+
+  .nearby-tab {
+    min-height: 56px;
+    font-size: 16px;
+  }
+
+  .nearby-card {
+    grid-template-columns: 48px 1fr;
+    gap: 14px;
+    padding: 20px 18px;
+  }
+
+  .nearby-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 16px;
+    font-size: 24px;
+  }
+
+  .nearby-card h3 {
+    font-size: 21px;
+  }
+}
